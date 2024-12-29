@@ -18,7 +18,7 @@ a {
 body {
     width: 100vw;
     height: 100%;
-    margin: 2rem;
+    margin: 0;
     padding: 0;
     background-color: #1B191E;
     color: #FAF7EA;
@@ -329,6 +329,18 @@ h2 {
     margin: 0;
 }
 
+@media (min-width: 820px) {
+
+    .nav-container {
+        width: 200px;
+    }
+
+    .hero-container {
+        margin: 0;
+        width: 90%;
+    }
+}
+
 @media (max-width: 800px) {
     
 
@@ -348,6 +360,7 @@ h2 {
         justify-content: space-evenly;
         align-items: flex-start;
     }
+
 
     .mobile {
         display: flex;
