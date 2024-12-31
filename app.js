@@ -12,6 +12,47 @@ function toggleMenu(menu) {
   }
 }
 
+// Project Card Population
+
+const projects = [
+
+  { 
+    name: "BearRabbit Taproom",
+    image: "assets/project-images/project1/bearrabbit-paper.png",
+    link: "project1.hmtl",
+    tags: ["Logo Design, Branding"],
+    tools: [""]
+  },
+
+  { 
+    name: "BearRabbit Taproom",
+    image: "assets/project-images/project1/bearrabbit-paper.png",
+    link: "project1.hmtl",
+    tags: ["Logo Design, Branding"],
+    tools: [""]
+  }
+
+];
+
+const projectsContainer = document.getElementById("projectGrid");
+
+projects.forEach(project => {
+  const projectCard = document.createElement('a');
+  projectCard.classList.add("project-card");
+  projectCard.href = project.link;
+  
+  projectCard.innerHTML = `
+    <div>
+      <img src="${project.image}" alt="${project.name}">
+      <h3>${project.name}</h3>
+    </div>
+  `
+  projectsContainer.appendChild(projectCard);
+})
+/* <div class="tags">
+      ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+    </div>
+*/
 
 // Lenis Smooth Scroll
 const lenis = new Lenis({
