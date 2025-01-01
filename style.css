@@ -71,9 +71,9 @@ h1 {
 
 .hero-container {
     height: 700px;
-    width: 95%;
+    width: inherit;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
 
