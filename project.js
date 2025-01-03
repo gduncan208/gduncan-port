@@ -25,4 +25,32 @@ if (currentProject) {
 
 console.log(currentProject);
 
+const myHeading = new SplitType('#project-heading')
+
+gsap.to('.char', {
+    y: 0,
+    stagger: 0.05, 
+    delay: 0.5,
+    duration: .1,
+    ease: "elastic.in(1,0.3)"
+})
+
+
+
+window.addEventListener('load', () => {
+
+    gsap.to('.detail', {
+      y: 0,
+      stagger: {
+        each: 0.1,
+        from: 'center',
+        grid: 'auto',
+        ease: 'power2.inOut',
+        repeat: -1 // Repeats immediately, not waiting for the other staggered animations to finish
+      }
+    })
+});
+
+
+
 

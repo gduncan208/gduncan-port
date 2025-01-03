@@ -15,21 +15,19 @@ function toggleMenu(menu) {
 // Project Card Population
 
 const projects = [
-
-  { 
-    name: "BearRabbit Taproom",
-    image: "assets/project-images/project1/bearrabbit-paper.png",
-    link: "project1.html",
-    tags: ["Logo Design, Branding"],
-    tools: ["Adobe Illustator", "another"]
-  },
-
   { 
     name: "Sundog Kombucha",
-    image: "assets/project-images/project2/sundog-bottle.png",
+    image: "assets/project-images/project1/sundog-bottle.png",
+    link: "project1.html",
+    tags: ["Packaging", "Branding"],
+    tools: ["adobe illustator", "adobe indesign"]
+  },
+  { 
+    name: "BearRabbit Taproom",
+    image: "assets/project-images/project2/bearrabbit-paper.png",
     link: "project2.html",
-    tags: ["Packaging, Branding"],
-    tools: []
+    tags: ["logo design", "branding"],
+    tools: ["adobe illustator"]
   }
 
 ];
