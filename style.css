@@ -34,7 +34,6 @@ html {
 
 a {
     text-decoration: none;
-    color: inherit;
 }
 
 
@@ -190,6 +189,19 @@ ul.nav {
     margin: 0;
 }
 
+a.link {
+    font-size: 38px;
+    margin: 0 0 1em;
+    color: #1B191E;
+    -webkit-text-stroke: .5px #FAF7EA;
+}
+
+.active-n{
+    color: #FAF7EA;
+    -webkit-text-stroke: none;
+    text-decoration: none;
+    font-size: 38px;
+}
 
 
 
@@ -432,7 +444,7 @@ h2 {
     margin-left: 1rem;
     animation: pro-grow;
     animation-duration: 1.5s;
-    animation-delay: 2s;
+    animation-delay: 1.25s;
     animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
     animation-fill-mode: forwards;
 }

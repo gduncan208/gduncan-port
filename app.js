@@ -12,6 +12,24 @@ function toggleMenu(menu) {
   }
 }
 
+function activeNav() {
+  const navLinks = document.querySelectorAll('.link');
+  const currentPage = window.location.href;
+
+  navLinks.forEach((navLink) => {
+    if (currentPage.includes(navLink.href)) {
+      navLink.classList.add('active-n');
+      navLink.classList.remove('link');
+    } else {
+      navLink.classList.remove('active-n');
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', activeNav);
+
+
+
 // Project Card Population
 
 const projects = [

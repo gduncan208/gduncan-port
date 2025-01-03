@@ -30,8 +30,8 @@ const myHeading = new SplitType('#project-heading')
 gsap.to('.char', {
     y: 0,
     stagger: 0.05, 
-    delay: 0.5,
-    duration: .1,
+    delay: 0.1,
+    duration: .05,
     ease: "elastic.in(1,0.3)"
 })
 
