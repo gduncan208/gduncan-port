@@ -308,7 +308,6 @@ ul.nav {
 }
 
 .work-heading {
-    width: ;
     height: 20vh;
 }
 
@@ -316,7 +315,6 @@ h2 {
     font-family: "Staatliches", 'sans-serif';
     font-weight: 400;
     font-size: 72px;
-    margin: ;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
@@ -351,7 +349,35 @@ h2 {
 
 .project-card img{
     width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Project Pages */
+
+#project-heading {
+    font-size: 32px;
+    margin: 0;
+}
+
+.aside {
+    align-self: flex-start;
+    width: 300px;
     height: 100%;
+    margin: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.p-line {
+    height: 500px;
+    margin-top: 10px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
 }
 
 
@@ -365,6 +391,8 @@ h2 {
         margin: 0;
         width: 90%;
     }
+
+  
 }
 
 @media (max-width: 800px) {
@@ -471,6 +499,12 @@ h2 {
     .project-card {
         width: 100%;
         height: auto;
+    }
+
+    .project-card img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
     }
 }
 

@@ -19,17 +19,17 @@ const projects = [
   { 
     name: "BearRabbit Taproom",
     image: "assets/project-images/project1/bearrabbit-paper.png",
-    link: "project1.hmtl",
+    link: "project1.html",
     tags: ["Logo Design, Branding"],
-    tools: [""]
+    tools: ["Adobe Illustator", "another"]
   },
 
   { 
-    name: "BearRabbit Taproom",
-    image: "assets/project-images/project1/bearrabbit-paper.png",
-    link: "project1.hmtl",
-    tags: ["Logo Design, Branding"],
-    tools: [""]
+    name: "Sundog Kombucha",
+    image: "assets/project-images/project2/sundog-bottle.png",
+    link: "project2.html",
+    tags: ["Packaging, Branding"],
+    tools: []
   }
 
 ];
@@ -40,7 +40,12 @@ projects.forEach(project => {
   const projectCard = document.createElement('a');
   projectCard.classList.add("project-card");
   projectCard.href = project.link;
-  
+
+  projectCard.addEventListener('click', () => {
+    localStorage.setItem('currentProject', JSON.stringify(project));
+
+  });
+
   projectCard.innerHTML = `
     <div>
       <img src="${project.image}" alt="${project.name}">
@@ -53,6 +58,8 @@ projects.forEach(project => {
       ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
     </div>
 */
+
+
 
 // Lenis Smooth Scroll
 const lenis = new Lenis({
