@@ -37,7 +37,35 @@ const projects = [
     name: "Sundog Kombucha",
     image: "assets/project-images/project1/sundog-bottle.png",
     link: "project1.html",
-    tags: ["Packaging", "Branding"],
+    tags: ["packaging", "branding"],
+    tools: ["adobe illustator", "adobe indesign"]
+  },
+  { 
+    name: "BearRabbit Taproom",
+    image: "assets/project-images/project2/bearrabbit-paper.png",
+    link: "project2.html",
+    tags: ["logo design", "branding"],
+    tools: ["adobe illustator"]
+  },
+  { 
+    name: "Sundog Kombucha",
+    image: "assets/project-images/project1/sundog-bottle.png",
+    link: "project1.html",
+    tags: ["packaging", "branding"],
+    tools: ["adobe illustator", "adobe indesign"]
+  },
+  { 
+    name: "BearRabbit Taproom",
+    image: "assets/project-images/project2/bearrabbit-paper.png",
+    link: "project2.html",
+    tags: ["logo design", "branding"],
+    tools: ["adobe illustator"]
+  },
+  { 
+    name: "Sundog Kombucha",
+    image: "assets/project-images/project1/sundog-bottle.png",
+    link: "project1.html",
+    tags: ["packaging", "branding"],
     tools: ["adobe illustator", "adobe indesign"]
   },
   { 
@@ -50,11 +78,23 @@ const projects = [
 
 ];
 
+const tagItem = document.querySelectorAll(".tag-item");
+
+tagItem.forEach(tagItem => {
+  tagItem.addEventListener("click", filterProjects);
+});
+
+function filterProjects(){
+  this.classList.toggle("selected");
+};
+
 const projectsContainer = document.getElementById("projectGrid");
 
 projects.forEach(project => {
+
   const projectCard = document.createElement('a');
   projectCard.classList.add("project-card");
+  projectCard.classList.add("fade");
   projectCard.href = project.link;
 
   projectCard.addEventListener('click', () => {
@@ -69,13 +109,8 @@ projects.forEach(project => {
     </div>
   `
   projectsContainer.appendChild(projectCard);
-})
-/* <div class="tags">
-      ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-    </div>
-*/
 
-
+});
 
 // Lenis Smooth Scroll
 const lenis = new Lenis({
@@ -99,18 +134,24 @@ gsap.to('.char', {
 })
 
 // Scroll Triggers
-
-let tl = gsap.timeline({
+gsap.registerPlugin(ScrollTrigger);
+document.querySelectorAll(".fade").forEach((fadeAnimation) => {
+  gsap.to(fadeAnimation, {
     scrollTrigger: {
-        trigger: '',
-        start: '',
-        end: '',
-        scrub: '',
-        markers: true
-    }
-})
+      trigger: fadeAnimation,
+      start: "top center",
+      markers: true,
+    }, 
+     opacity: 1,
+     duration: 0.5,
+     y: 10,
+     stagger: true,
+  })
+  
+});
 
-tl.to('', {
-    
-})
+
+
+
+
 

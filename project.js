@@ -51,6 +51,20 @@ window.addEventListener('load', () => {
     })
 });
 
-
+gsap.registerPlugin(ScrollTrigger);
+document.querySelectorAll(".fade").forEach((fadeAnimation) => {
+  gsap.to(fadeAnimation, {
+    scrollTrigger: {
+      trigger: fadeAnimation,
+      start: "top center",
+      markers: true,
+    }, 
+     opacity: 1,
+     duration: 0.5,
+     y: 10,
+     stagger: true,
+  })
+  
+});
 
 
