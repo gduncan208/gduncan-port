@@ -23,6 +23,8 @@ if (currentProject) {
 
 };
 
+
+
 console.log(currentProject);
 
 const myHeading = new SplitType('#project-heading')
@@ -34,6 +36,28 @@ gsap.to('.char', {
     duration: .05,
     ease: "elastic.in(1,0.3)"
 })
+
+const projectHeading = document.getElementById("project-heading");
+const desktopContainer = document.querySelector(".details");
+const mobileContainer = document.querySelector(".back-bar");
+
+moveProjectHeading();
+window.addEventListener("resize", moveProjectHeading);
+
+function moveProjectHeading() {
+  if (window.innerWidth < 800) {
+    if (!mobileContainer.contains(projectHeading)) {
+      mobileContainer.appendChild(projectHeading);
+      console.log("mobile")
+    }
+    
+  } else {
+    if (!desktopContainer.contains(projectHeading)) {
+      desktopContainer.insertBefore(projectHeading, desktopContainer.firstChild);
+      console.log("deskop");
+    }
+  }
+};
 
 
 
@@ -57,7 +81,7 @@ document.querySelectorAll(".fade").forEach((fadeAnimation) => {
     scrollTrigger: {
       trigger: fadeAnimation,
       start: "top center",
-      markers: true,
+      
     }, 
      opacity: 1,
      duration: 0.5,

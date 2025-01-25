@@ -131,7 +131,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .social {
@@ -562,13 +562,6 @@ h4 {
     width: 700px;
 }
 
-.mobile-pro-title {
-    display: none;
-}
-
-.mobile-dropdown {
-    display: none;
-}
 
 @keyframes pro-grow {
     from {
@@ -717,14 +710,41 @@ footer {
         flex-direction: column;
     }
 
-    .left-container {
+
+    .p-line {
         display: none;
+    }
+
+    .left-container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .aside {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .details {
+        
+    }
+
+    .detail {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: ;
     }
 
     #project-display img {
         width: 95vw;
         height: auto;
     }
+
 
     .mobile-pro-title {
         width: 100%;
@@ -738,6 +758,8 @@ footer {
     .mobile-dropdown {
         display: flex;
     }
+
+   
 }
 
 

@@ -140,7 +140,7 @@ document.querySelectorAll(".fade").forEach((fadeAnimation) => {
     scrollTrigger: {
       trigger: fadeAnimation,
       start: "top center",
-      markers: true,
+      
     }, 
      opacity: 1,
      duration: 0.5,
