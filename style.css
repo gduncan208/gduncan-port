@@ -901,9 +901,18 @@ footer {
         width: 100%;
     }
 
+    .back-bar {
+        width: 100%;
+        margin: 0;
+        padding: 1rem;
+        justify-content: space-between;
+    }
+
     .aside {
         margin: 0;
         padding: 0;
+        height: ;
+        overflow: hidden;
         width: 100%;
         justify-content: center;
     }
@@ -916,12 +925,16 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         margin: ;
     }
 
+    #project-display {
+        margin: 0;
+    }
+
     #project-display img {
-        width: 95vw;
+        width: 100%;
         height: auto;
     }
 
