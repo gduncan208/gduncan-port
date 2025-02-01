@@ -579,7 +579,7 @@ footer {
 
 /* Obnoxiously Large Screens */
 
-@media (min-width: 1300px) {
+@media (min-width: 1800px) {
     h1 {
         font-family: "Staatliches", 'sans-serif';
         font-weight: 400;
@@ -778,6 +778,11 @@ footer {
 
     body, html {
       margin: 0;
+      overflow: hidden;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
     }
 
     #hero {
@@ -892,7 +897,19 @@ footer {
 
 
     .p-line {
-        display: none;
+        
+    }
+
+    @keyframes pro-grow {
+        from {
+            height: 0;
+            opacity: 50%;
+        }
+    
+        to {
+            height: 450px;
+            opacity: 100%;
+        }
     }
 
     .left-container {
@@ -905,16 +922,55 @@ footer {
         width: 100%;
         margin: 0;
         padding: 1rem;
-        justify-content: space-between;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .back-bar-heading {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pro-dropdown {
+        fill: #595366;
+        height: 26px;
+        width: 26px;
+        margin: .5em;
+        transition: ease-in-out .1s;
+        
+    }
+
+    .pro-dropdown.activated {
+        transition: ease-in .1s;
+        fill: #ffa33a;
+    }
+
+    .inner-arrow {
+        transform-origin: center;
+        transform: rotate(-90deg);
+        transition: ease-in-out .1s;
+    }
+
+    .inner-arrow.activated {
+        transform-origin: center;
+        transform: rotate(0deg);
+        transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) .1s;
     }
 
     .aside {
         margin: 0;
         padding: 0;
-        height: ;
+        height: 0px;
         overflow: hidden;
         width: 100%;
         justify-content: center;
+        transition: ease-in-out .2s;
+    }
+
+    .aside.activated {
+        height: 100vh;
     }
 
     .details {

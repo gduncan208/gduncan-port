@@ -39,7 +39,7 @@ gsap.to('.char', {
 
 const projectHeading = document.getElementById("project-heading");
 const desktopContainer = document.querySelector(".details");
-const mobileContainer = document.querySelector(".back-bar");
+const mobileContainer = document.querySelector(".back-bar-heading");
 
 moveProjectHeading();
 window.addEventListener("resize", moveProjectHeading);
@@ -59,6 +59,16 @@ function moveProjectHeading() {
   }
 };
 
+const dropdownBtn = document.querySelector(".pro-dropdown");
+const proDetails = document.querySelector(".aside");
+const innerArrow = document.querySelector(".inner-arrow");
+
+function toggleDropdown() {
+    console.log("I've been toggled!");
+    proDetails.classList.toggle("activated");
+    dropdownBtn.classList.toggle("activated");
+    innerArrow.classList.toggle("activated");
+};
 
 
 window.addEventListener('load', () => {
