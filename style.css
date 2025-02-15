@@ -59,6 +59,10 @@ body.no-scroll {
     overflow: hidden;
 }
 
+p {
+    text-transform: lowercase;
+}
+
 
 /* Hero section */
 
@@ -215,7 +219,7 @@ a.link {
 
 .side-line {
     background-color: #FAF7EA;
-    width: 1px;
+    width: 2px;
     height: 0px;
 }
 
@@ -341,6 +345,106 @@ a.link {
     margin-left: 2rem;
 }
 
+/* About section */
+#about {
+    height: 900px;
+    width: 100%;
+    background-color: #FAF7EA;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    color: #0f0c13;
+}
+
+.about-wrapper {
+    height: 80%;
+    width: 500px;
+    display: flex;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 500px;
+    height: 80%;
+}
+
+.about-heading {
+    align-self: flex-start;
+}
+
+.ab-lines {
+    background-color: #0f0c13;
+    margin: 0 1rem;
+    width: 2px;
+    height: 0;
+}
+
+.about-l-line {
+    animation: left-gro;
+    animation-duration: 1s;
+    animation-delay: .3s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-fill-mode: forwards;
+}
+
+@keyframes left-gro {
+    from {
+        height: 0;
+        opacity: 50%;
+    }
+
+    to {
+        height: 100%;
+        opacity: 100%;
+    }
+}
+
+.about-r-line {
+    align-self: flex-end;
+    animation: right-gro;
+    animation-duration: 1s;
+    animation-delay: .3s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-fill-mode: forwards;
+}
+
+@keyframes right-gro {
+    from {
+        height: 0;
+        opacity: 50%;
+    }
+
+    to {
+        height: 70%;
+        opacity: 100%;
+    }
+}
+
+.portrait {
+    height: auto;
+    width: 300px;
+}
+
+.portrait-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 80%;
+}
+
+.portrait-wrapper {
+    height: 80%;
+    width: 500px;
+    display: flex;
+}
+
 /* Work Section */
 
 #work {
@@ -440,6 +544,7 @@ h2 {
 .fade {
     opacity: 0;
     transition: ease-in;
+    will-change: opacity, transform;
 }
 
 /* Project Pages */
@@ -583,14 +688,14 @@ footer {
     h1 {
         font-family: "Staatliches", 'sans-serif';
         font-weight: 400;
-        font-size: 164px;
+        font-size: 142px;
         margin: -2rem 0;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     
     }
     
     .greeting {
-        font-size: 54px;
+        font-size: 48px;
         margin: 0;
         text-transform: lowercase;
     }
@@ -601,7 +706,7 @@ footer {
     }
     
     .first {
-        font-size: 184px;
+        font-size: 162px;
     }
     
     
@@ -879,6 +984,10 @@ footer {
         place-items: center;
     }
 
+    #project-heading {
+        text-align: center;
+    }
+
     .project-card {
         width: 100%;
         height: auto;
@@ -939,22 +1048,20 @@ footer {
         width: 26px;
         margin: .5em;
         transition: ease-in-out .1s;
+        transform: rotate(-90deg);
         
     }
 
     .pro-dropdown.activated {
         transition: ease-in .1s;
         fill: #ffa33a;
+        transform: rotate(0deg);
     }
 
-    .inner-arrow {
-        transform-origin: center;
-        transform: rotate(-90deg);
-        transition: ease-in-out .1s;
-    }
-
+ 
     .inner-arrow.activated {
         transform-origin: center;
+        fill: #ffa33a;
         transform: rotate(0deg);
         transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) .1s;
     }
@@ -1012,3 +1119,7 @@ footer {
 }
 
 
+.spacer {
+    width: 100%;
+    height: 200px;
+}
