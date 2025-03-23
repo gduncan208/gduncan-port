@@ -161,6 +161,12 @@ gsap.to('.char', {
     ease: "elastic.in(1,0.3)"
 })
 
+const aboutMeLine = document.querySelector("about-l-line");
+
+function setMobileAbout() {
+  
+};
+
 const projectHeading = document.getElementById("project-heading");
 const desktopContainer = document.querySelector(".details");
 const mobileContainer = document.querySelector(".back-bar-heading");
