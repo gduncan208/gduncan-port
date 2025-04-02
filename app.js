@@ -121,6 +121,18 @@ const lenis = new Lenis({
     console.log(e);
   });
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('trigger');
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+  
+  const items = document.querySelectorAll('.about-line');
+  items.forEach(item => observer.observe(item));
+
 // h1 Stagger Animation
 
 const myFirst = new SplitType('#my-last')
