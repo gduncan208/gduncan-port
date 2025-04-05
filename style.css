@@ -101,7 +101,7 @@ h1 {
 
 .hero-container {
     height: 700px;
-    width: 95%;
+    width: 90%;
     max-width: 1800px;
     display: flex;
     justify-content: space-around;
@@ -109,7 +109,7 @@ h1 {
 }
 
 .intro-container {
-    width: 500px;
+    width: 300px;
     height: 80%;
     display: flex;
     justify-content: center;
@@ -122,6 +122,10 @@ h1 {
     justify-content: space-between;
     margin-left: 2rem;
     padding: 0 2rem 2rem 2rem;
+}
+
+.name-holder {
+    width: 400px;
 }
 
 .border {
@@ -180,7 +184,7 @@ h1 {
 }
 
 .nav-container {
-    width: 500px;
+    width: 300px;
     height: 80%;
     display: flex;
     flex-direction: column;
@@ -471,6 +475,13 @@ a.link {
     margin: 0;
 }
 
+.skill-item {
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    height: auto;
+}
+
 .proficient-items {
     align-items: flex-start;
 }
@@ -503,6 +514,7 @@ a.link {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    margin-top: 2rem;
 }
 
 h2 {
@@ -518,7 +530,7 @@ h2 {
     height: 200px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-start;
 }
 
@@ -526,15 +538,15 @@ ul.wnav {
     display: flex;
     flex-direction: column;
     align-items:  flex-end;
-    justify-content: center;
+    justify-content: space-around;
     height: 100px;
     font-family: "Staatliches", 'sans-serif';
     font-weight: 400;
-    font-size: 64px;
+    font-size: 52px;
     list-style: none;
     text-align: right;
     margin: 0;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
     padding: 0;
     height: inherit;
 }
