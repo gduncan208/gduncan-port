@@ -449,7 +449,7 @@ a.link {
     height: 100%;
 }
 
-.proficient {
+/* .proficient {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -461,6 +461,14 @@ a.link {
     flex-direction: row-reverse;
     align-items: center;
     width: 90%;
+} */
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: fit-content;
 }
 
 .skill-items {
@@ -478,10 +486,23 @@ a.link {
 .skill-item {
     display: flex;
     flex-direction: row;
-    width: 100px;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
     height: auto;
+    opacity: 0; 
+    transition: opacity 0.5s ease;
 }
 
+.skill-svg {
+    height: 40px;
+    width: 40px;
+}
+
+.space {
+    width: 100%;
+    height: 800px;
+}
 .proficient-items {
     align-items: flex-start;
 }
