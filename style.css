@@ -438,13 +438,21 @@ a.link {
     width: 90%;
     max-width: 1800px;
     display: flex;
-    flex-direction: row;
+    flex-direction: roq;
 }
 
-.column-wrapper {
+.doing-container {
+    width: 100%;
+    height: 200px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.doing-block {
     width: 30%;
+    height: 200px;
+    background-color: #595366;
 }
 
 .st-header, .ft-header {
@@ -471,20 +479,24 @@ a.link {
     margin: 0;
     width: 100%;
     height: 100%;
+    display: grid;
 }
 
 .skill-item {
-    width: 100%;
-    height: 70px;
+    width: 150px;
+    height: fit-content;
     color: #fcfaf3;
     text-transform: lowercase;
     list-style: none;
-    font-size: 18px;
+    font-size: 21px;
+    margin: 2rem;
+    padding-left: 1rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    padding: 0;
-    margin: 0;
+    justify-content: flex-start;
+    align-items: center;
+    border-left: 3px solid #595366;
+    
 }
 
 

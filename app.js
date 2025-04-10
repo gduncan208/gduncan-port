@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
             skillItem.classList.add("skill-item");
       
             skillItem.innerHTML = `
-                
+                <div> </div> 
                 <span>${skill.skillname}</span>
             `;
             skillGrid.appendChild(skillItem);
