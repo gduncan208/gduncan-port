@@ -104,7 +104,7 @@ h1 {
     width: 90%;
     max-width: 1800px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -136,7 +136,7 @@ h1 {
 }
 
 .socials {
-    height: 200px; 
+    height: 150px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -243,7 +243,7 @@ a.link {
     }
 
     to {
-        height: 300px;
+        height: 250px;
         opacity: 100%;
     }
 }
@@ -424,13 +424,27 @@ a.link {
 
 #stats {
     height: 90vh;
-    width: 82%;
+    width: 100%;
     background-color: #0f0c13;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
     color: #fcfaf3;
+}
+
+.stats-container {
+    height: 700px;
+    width: 90%;
+    max-width: 1800px;
+    display: flex;
+    flex-direction: row;
+}
+
+.column-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
 }
 
 .st-header, .ft-header {
@@ -439,60 +453,40 @@ a.link {
 }
 
 .stat-heading {
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
 }
 
-.st-lines, .ft-lines {
-    background-color: #FAF7EA;
+.st-lines {
+    background-color: #fcfaf3;
     margin: 0 2rem;
     width: 2px;
     height: 100%;
 }
 
-/* .proficient {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 90%;
-}
-
-.familiar {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    width: 90%;
-} */
-
 .skill-list {
-    list-style: none;
     padding: 0;
     margin: 0;
+    width: 100%;
     height: 100%;
-    width: fit-content;
 }
 
-.skill-items {
+.skill-item {
+    width: 100%;
+    height: 70px;
+    color: #fcfaf3;
     text-transform: lowercase;
     list-style: none;
-    font-weight: 500;
-    font-size: 32px;
+    font-size: 18px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
     padding: 0;
     margin: 0;
 }
 
-.skill-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 200px;
-    height: auto;
-    opacity: 0; 
-    transition: opacity 0.5s ease;
-}
 
 .skill-svg {
     height: 40px;

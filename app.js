@@ -123,20 +123,20 @@ document.addEventListener("DOMContentLoaded", () => {
       
       const skillGrid = document.querySelector(".skill-list");
       
-    //   console.log("skillGrid:", skillGrid); 
+      console.log("skillGrid:", skillGrid); 
       
-    //   if (skillGrid) {
-    //     skills.forEach(skill => {
-    //         const skillItem = document.createElement("li");
-    //         skillItem.classList.add("skill-item");
+      if (skillGrid) {
+        skills.forEach(skill => {
+            const skillItem = document.createElement("li");
+            skillItem.classList.add("skill-item");
       
-    //         skillItem.innerHTML = `
+            skillItem.innerHTML = `
                 
-    //             <span>${skill.skillname}</span>
-    //         `;
-    //         skillGrid.appendChild(skillItem);
-    //     });
+                <span>${skill.skillname}</span>
+            `;
+            skillGrid.appendChild(skillItem);
+        });
       
   
-  });
+  }});
   
