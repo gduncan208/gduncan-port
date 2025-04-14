@@ -213,6 +213,11 @@ a.link {
     -webkit-text-stroke: .5px #fcfaf3;
 }
 
+a.link:hover {
+    transform: scale(1);
+    transition: ease-in;
+}
+
 .active-n{
     color: #fcfaf3;
     -webkit-text-stroke: none;
