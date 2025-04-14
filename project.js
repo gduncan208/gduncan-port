@@ -8,8 +8,20 @@ document.addEventListener("DOMContentLoaded", () => {
       const projectHeading = document.getElementById("project-heading");
       const tagsContainer = document.querySelector(".tags");
       const toolsContainer = document.querySelector(".tools");
+      const awardsContainer = document.querySelector(".awards");
+      const projectGallery = document.getElementById("projectDisplay");
 
       if (projectHeading) projectHeading.innerHTML = currentProject.name;
+
+    //   if (awardsContainer) {
+    //     toolsContainer.innerHTML = ""; 
+    //     currentProject.awards.forEach(award => {
+    //         const projectAward = document.createElement("a");
+    //         projectAward.className = "award";
+    //         projectAward.src = award;
+    //         awardsContainer.appendChild(projectAward);
+    //     });
+    // }
       
       if (tagsContainer) {
           tagsContainer.innerHTML = ""; 
@@ -30,6 +42,18 @@ document.addEventListener("DOMContentLoaded", () => {
               toolsContainer.appendChild(projectTool);
           });
       }
+
+      if (projectGallery) {
+        projectGallery.innerHTML = ""; 
+        currentProject.gallery.forEach(gImg => {
+            const projectGalleryImg = document.createElement("img");
+            projectGalleryImg.className = "pro-img";
+            projectGalleryImg.src = gImg;
+            projectGallery.appendChild(projectGalleryImg);
+        });
+
+        
+    }
   }
 
   // Project Data
@@ -37,17 +61,37 @@ document.addEventListener("DOMContentLoaded", () => {
       { 
           name: "Sundog Kombucha",
           image: "assets/project-images/project1/sundog-bottle.png",
-          link: "project1.html",
+          link: "project.html",
+          awards: "",
           tags: ["packaging", "branding"],
-          tools: ["Adobe Illustrator", "Adobe InDesign"]
+          tools: ["Adobe Illustrator", "Adobe InDesign"],
+          gallery: [
+            "assets/project-images/project1/sundog-bottle.png",
+            "assets/project-images/project1/Sundog-Ad.png",
+          ]
       },
       { 
           name: "BearRabbit Taproom",
           image: "assets/project-images/project2/bearrabbit-paper.png",
-          link: "project2.html",
+          link: "project.html",
+          awards: "",
           tags: ["logo design", "branding"],
-          tools: ["Adobe Illustrator"]
-      }
+          tools: ["Adobe Illustrator"],
+          gallery: [
+            
+          ]
+      },
+      { 
+        name: "Festival at Sandpoint Poster",
+        image: "",
+        link: "project.html",
+        awards: "https://www.festivalatsandpoint.com/posters",
+        tags: ["illustration", "poster design"],
+        tools: ["Adobe Illustrator", "Adobe InDesign"],
+        gallery: [
+          
+        ]
+    },
   ];
 
   const projectsContainer = document.getElementById("projectGrid");
@@ -105,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const projectHeading = document.getElementById("project-heading");
-  const desktopContainer = document.querySelector(".details");
+  const desktopContainer = document.querySelector(".project-details");
   const mobileContainer = document.querySelector(".back-bar-heading");
 
   function moveProjectHeading() {
