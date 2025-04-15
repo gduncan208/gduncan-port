@@ -60,34 +60,47 @@ document.addEventListener("DOMContentLoaded", () => {
   const projects = [
       { 
           name: "Sundog Kombucha",
-          image: "assets/project-images/project1/sundog-bottle.png",
+          image: "assets/project-images/sundog/sundog-bottle.png",
           link: "project.html",
           awards: "",
           tags: ["packaging", "branding"],
           tools: ["Adobe Illustrator", "Adobe InDesign"],
           gallery: [
-            "assets/project-images/project1/sundog-bottle.png",
-            "assets/project-images/project1/Sundog-Ad.png",
+            "assets/project-images/sundog/sundog-bottle.png",
+            "assets/project-images/sundog/Sundog-Ad.png",
           ]
       },
       { 
           name: "BearRabbit Taproom",
-          image: "assets/project-images/project2/bearrabbit-paper.png",
+          image: "assets/project-images/bearrabbit/bearrabbit-paper.png",
           link: "project.html",
           awards: "",
           tags: ["logo design", "branding"],
           tools: ["Adobe Illustrator"],
           gallery: [
-            
+            "assets/project-images/bearrabbit/logopaper.png",
+            "assets/project-images/bearrabbit/beergradient.jpg",
+            "assets/project-images/bearrabbit/coaster.png",
           ]
       },
       { 
         name: "Festival at Sandpoint Poster",
-        image: "",
+        image: "assets/project-images/festivalsandpoint/sandpointposter.png",
         link: "project.html",
         awards: "https://www.festivalatsandpoint.com/posters",
         tags: ["illustration", "poster design"],
-        tools: ["Adobe Illustrator", "Adobe InDesign"],
+        tools: ["Adobe Illustrator"],
+        gallery: [
+          
+        ]
+    },
+    { 
+        name: "PIA Poster",
+        image: "assets/project-images/festivalsandpoint/sandpointposter.png",
+        link: "project.html",
+        awards: "https://www.festivalatsandpoint.com/posters",
+        tags: ["illustration", "poster design"],
+        tools: ["Adobe Illustrator"],
         gallery: [
           
         ]

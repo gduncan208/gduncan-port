@@ -801,13 +801,14 @@ h4 {
     place-items: center;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    gap: 1rem;
 }
 
 .pro-img{
     height: auto;
-    width: 700px;
+    width: 60%;
 }
+
+
 
 
 @keyframes pro-grow {
@@ -837,6 +838,16 @@ footer {
     height: 800px;
     width: 95%;
 }
+
+@media (min-width: 1px) {
+    h1 {
+        font-family: "Staatliches", 'sans-serif';
+        font-weight: 400;
+        font-size: 142px;
+        margin: -2rem 0;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    
+    }
 
 /* @media (min-width: 1800px) {
     h1 {
