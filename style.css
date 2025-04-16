@@ -90,6 +90,10 @@ h1 {
     font-size: 134px;
 }
 
+.last {
+    font-size: 118px;
+}
+
 
 #hero {
     height: 90vh;
@@ -805,7 +809,8 @@ h4 {
 
 .pro-img{
     height: auto;
-    width: 60%;
+    width: 50%;
+    margin: 10px 0;
 }
 
 
@@ -839,15 +844,7 @@ footer {
     width: 95%;
 }
 
-@media (min-width: 1px) {
-    h1 {
-        font-family: "Staatliches", 'sans-serif';
-        font-weight: 400;
-        font-size: 142px;
-        margin: -2rem 0;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    
-    }
+
 
 /* @media (min-width: 1800px) {
     h1 {
@@ -1086,7 +1083,8 @@ footer {
     }
 }
 
-@media (max-width: 800px) {
+
+@media (max-width: 1200px) {
     
 
     body, html {
@@ -1146,6 +1144,10 @@ footer {
 
     .first {
         font-size: 110px;
+    }
+
+    .last {
+        font-size: 98px;
     }
 
     .blerb{
@@ -1260,6 +1262,8 @@ footer {
 
     #project-heading {
         text-align: center;
+        margin-left: 1rem;
+        font-size: ;
     }
 
     .project-card {

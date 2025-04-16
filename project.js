@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //   if (awardsContainer) {
     //     toolsContainer.innerHTML = ""; 
     //     currentProject.awards.forEach(award => {
-    //         const projectAward = document.createElement("a");
+    //         const projectAward = document.createElement("span");
     //         projectAward.className = "award";
     //         projectAward.src = award;
     //         awardsContainer.appendChild(projectAward);
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
         name: "Festival at Sandpoint Poster",
         image: "assets/project-images/festivalsandpoint/sandpointposter.png",
         link: "project.html",
-        awards: "https://www.festivalatsandpoint.com/posters",
+        awards: "First Place",
         tags: ["illustration", "poster design"],
         tools: ["Adobe Illustrator"],
         gallery: [
@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileContainer = document.querySelector(".back-bar-heading");
 
   function moveProjectHeading() {
-      if (window.innerWidth < 800) {
+      if (window.innerWidth < 1200) {
           if (!mobileContainer.contains(projectHeading)) {
               mobileContainer.appendChild(projectHeading);
           }
