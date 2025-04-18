@@ -92,6 +92,7 @@ h1 {
 
 .blerb {
     max-width: 400px;
+    text-transform: lowercase;
 }
 
 
@@ -986,6 +987,7 @@ footer {
     .blerb{
         font-size: 14px;
         margin: 0;
+
     }
 
     .nav-container {
