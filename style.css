@@ -353,7 +353,7 @@ a.link:hover {
 
 
 .mn-line {
-    width: 1px;
+    width: 3px;
     background-color: #fcfaf3;
     height: 250px;
     margin-left: 2rem;
@@ -408,7 +408,7 @@ a.link:hover {
 
 .about-line {
     background-color: #fcfaf3;
-    width: 4px;
+    width: 3px;
     height: 400px;
     margin: 0 2rem;
 }
@@ -479,7 +479,7 @@ a.link:hover {
 .st-lines {
     background-color: #fcfaf3;
     margin: 0 2rem;
-    width: 2px;
+    width: 3px;
     height: 100%;
 }
 
@@ -662,6 +662,7 @@ ul.wnav {
 .project-card {
     width: 100%;
     height: fit-content;
+    position: relative;
 }
 
 .project-card h3{
@@ -670,6 +671,14 @@ ul.wnav {
     margin: .5rem;
     font-weight: 400;
     text-transform:lowercase;
+    align-self: flex-start;
+}
+
+.project-titles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .project-card a{
@@ -681,7 +690,36 @@ ul.wnav {
     width: 100%;
     height: 400px;
     object-fit: cover;
+    position: relative;
 }
+
+.card-award {
+    display: flex;
+    align-items: center;
+    text-transform: lowercase;
+    color: #ffa33a;
+    font-size: 20px;
+    /* background-color: #ffa33a; */
+    /* border-radius: 50px; */
+    padding: 8px;
+}
+
+.card-hover-tags {
+    display: none;
+}
+
+.project-card:hover .card-hover-tags {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    gap: 10px;
+    max-width: 75%;
+}
+
+
+
 
 /* Animation Collective - Work Section */
 
@@ -924,60 +962,6 @@ footer {
         width: 90%;
     }
 
-    #stats {
-        height: 70vh;
-        width: 82%;
-        background-color: #0f0c13;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        color: #fcfaf3;
-    }
-    
-    .st-header, .ft-header {
-        height: fit-content;
-        display: flex;
-        
-    }
-
-    .stat-heading {
-        font-size: 36px;
-        width: fit-content;
-    }
-    
-    .st-lines, .ft-lines {
-        background-color: #FAF7EA;
-        margin: 0 1em;
-        width: 2px;
-        height: 100px;
-    }
-    
-    .proficient {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    
-    .familiar {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-    }
-
-    .stat-box {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .skill-items {
-        padding: 0;
-        margin: 0;
-        font-size: 16px;
-    }
-}
-
 
 @media (max-width: 1200px) {
     
@@ -1054,6 +1038,10 @@ footer {
         display: none;
     }
     
+    .work-dash {
+        height: fit-content;
+    }
+
     .left-line {
         animation-name: grow;
         animation-duration: 1s;
@@ -1072,6 +1060,14 @@ footer {
             height: 250px;
             opacity: 100%;
         }
+    }
+
+    .project-card h3 {
+        font-size: 18px;
+    }
+
+    .card-award {
+        font-size: 16px;
     }
 
 

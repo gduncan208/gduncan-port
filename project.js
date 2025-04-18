@@ -111,12 +111,12 @@ document.addEventListener("DOMContentLoaded", () => {
         tags: ["illustration", "poster design"],
         tools: ["Adobe Illustrator"],
         gallery: [
-          
+            "assets/project-images/festivalsandpoint/festival_gracie_PRINT-01.jpg"
         ]
     },
     { 
         name: "PIA Poster",
-        image: "assets/project-images/festivalsandpoint/sandpointposter.png",
+        image: "assets/project-images/pia/piaposter.jpg",
         link: "project.html",
         awards: [
             {
@@ -125,10 +125,10 @@ document.addEventListener("DOMContentLoaded", () => {
               url: "https://www.piasc.org/printexcellence/"
             }
           ],
-        tags: ["illustration", "poster design"],
-        tools: ["Adobe Illustrator"],
+        tags: ["poster design"],
+        tools: ["Adobe Photoshop"],
         gallery: [
-          
+          "assets/project-images/pia/piaposter.jpg",
         ]
     },
     { 
@@ -147,6 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const projectsContainer = document.getElementById("projectGrid");
 
+
   if (projectsContainer) {
       projects.forEach(project => {
           const projectCard = document.createElement("a");
@@ -157,11 +158,23 @@ document.addEventListener("DOMContentLoaded", () => {
               localStorage.setItem("currentProject", JSON.stringify(project));
           });
 
+          const awardTitles = Array.isArray(project.awards) && project.awards.length > 0
+          ? `<div class="card-hover-award">${project.awards[0].award}</div>`
+          : "";
+
           projectCard.innerHTML = `
-              <div>
-                  <img src="${project.image}" alt="${project.name}">
-                  <h3>${project.name}</h3>
-              </div>
+            <div>
+                <img src="${project.image}" alt="${project.name}">
+                <div class="card-hover-tags">
+                     ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
+                </div>
+            </div>
+            <div class="project-titles">
+                <h3>${project.name}</h3> 
+                <div class="card-award"> 
+                ${awardTitles}
+                </div>   
+            </div>
           `;
           projectsContainer.appendChild(projectCard);
       });
