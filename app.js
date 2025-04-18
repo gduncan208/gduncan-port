@@ -117,10 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ];
 
-      // Look into pinning!!!!
-      
-    
-      
+  
       const skillGrid = document.querySelector(".skill-list");
       
       console.log("skillGrid:", skillGrid); 

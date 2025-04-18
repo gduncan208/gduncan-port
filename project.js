@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const toolsContainer = document.querySelector(".tools");
       const awardsContainer = document.querySelector(".awards");
       const awardHeading = document.querySelector(".award-heading");
+      const briefContainer = document.querySelector(".brief");
       const projectGallery = document.getElementById("projectDisplay");
 
       if (projectHeading) projectHeading.innerHTML = currentProject.name;
@@ -42,6 +43,20 @@ document.addEventListener("DOMContentLoaded", () => {
           awardHeading.style.display = "none";
         }
       }
+
+      if (briefContainer) {
+        briefContainer.innerHTML = "";
+
+        const projectBrief = document.createElement("p");
+        projectBrief.className = "brief-desc";
+        projectBrief.textContent = currentProject.brief;
+        briefContainer.appendChild(projectBrief);
+      }
+
+      const clientContainer = document.querySelector(".client-name");
+        if (clientContainer) {
+        clientContainer.innerHTML = currentProject.client || "N/A";
+        }
       
       if (tagsContainer) {
           tagsContainer.innerHTML = ""; 
@@ -69,6 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const projectGalleryImg = document.createElement("img");
             projectGalleryImg.className = "pro-img";
             projectGalleryImg.src = gImg;
+
+
             projectGallery.appendChild(projectGalleryImg);
         });
 
@@ -80,6 +97,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const projects = [
     { 
         name: "BearRabbit Taproom",
+        brief: "Create a logo for a hangout such as a pub or taproom with the name BearRabbit",
+        
         image: "assets/project-images/bearrabbit/bearrabbit-paper.png",
         link: "project.html",
         awards: [
@@ -98,7 +117,31 @@ document.addEventListener("DOMContentLoaded", () => {
         ]
       },
       { 
+        name: "Breathe Matchbox",
+        brief: "Create a package design of your choice",
+        client: "",
+        image: "assets/project-images/breathematchbox/matchbox.jpg",
+        link: "project.html",
+        awards: [
+          {
+            contest: "Spokane American Advertisting Federation - Sales and Marketing Packaging",
+            award: "Silver Addy Award",
+            url: ""
+          }
+        ],
+        tags: ["packaging", "illustration"],
+        tools: ["Adobe Illustrator"],
+        gallery: [
+          "assets/project-images/breathematchbox/package.png",
+          "assets/project-images/breathematchbox/matchbox.jpg",
+          "assets/project-images/breathematchbox/matchesad.jpg",
+          "assets/project-images/breathematchbox/drawing.jpg",
+        ]
+      },
+      { 
         name: "Festival at Sandpoint Poster",
+        brief: "Create a poster the encompasses the themes of the Northwest, Sandpoint or music for the Festival at Sandpoint annual event",
+        client: "",
         image: "assets/project-images/festivalsandpoint/sandpointposter.png",
         link: "project.html",
         awards: [
@@ -116,6 +159,8 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     { 
         name: "PIA Poster",
+        brief: "Create a poster with the prompts 'print is essential' or 'print is persuasive",
+        client: "",
         image: "assets/project-images/pia/piaposter.jpg",
         link: "project.html",
         awards: [
@@ -133,6 +178,8 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     { 
         name: "Sundog Kombucha",
+        brief: "Create a label design of your choice",
+        client: "",
         image: "assets/project-images/sundog/sundog-bottle.png",
         link: "project.html",
         awards: [],
