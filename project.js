@@ -9,19 +9,39 @@ document.addEventListener("DOMContentLoaded", () => {
       const tagsContainer = document.querySelector(".tags");
       const toolsContainer = document.querySelector(".tools");
       const awardsContainer = document.querySelector(".awards");
+      const awardHeading = document.querySelector(".award-heading");
       const projectGallery = document.getElementById("projectDisplay");
 
       if (projectHeading) projectHeading.innerHTML = currentProject.name;
 
-    //   if (awardsContainer) {
-    //     toolsContainer.innerHTML = ""; 
-    //     currentProject.awards.forEach(award => {
-    //         const projectAward = document.createElement("span");
-    //         projectAward.className = "award";
-    //         projectAward.src = award;
-    //         awardsContainer.appendChild(projectAward);
-    //     });
-    // }
+      if (awardsContainer) {
+        const awards = currentProject.awards;
+      
+        awardsContainer.innerHTML = ""; 
+      
+        if (Array.isArray(awards) && awards.length > 0) {
+          awards.forEach(award => {
+            const contestLink = document.createElement("a");
+            contestLink.className = "contest";
+            contestLink.href = award.url || "#";
+            contestLink.textContent = award.name || award.contest || "Contest";
+            contestLink.target = "_blank";
+            contestLink.rel = "noopener noreferrer";
+      
+            const awardSpan = document.createElement("span");
+            awardSpan.className = "award";
+            awardSpan.textContent = award.award;
+      
+            awardsContainer.appendChild(contestLink);
+            awardsContainer.appendChild(awardSpan);
+          });
+      
+          awardsContainer.style.display = "flex";
+        } else {
+          awardsContainer.style.display = "none";
+          awardHeading.style.display = "none";
+        }
+      }
       
       if (tagsContainer) {
           tagsContainer.innerHTML = ""; 
@@ -58,36 +78,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Project Data
   const projects = [
-      { 
-          name: "Sundog Kombucha",
-          image: "assets/project-images/sundog/sundog-bottle.png",
-          link: "project.html",
-          awards: "",
-          tags: ["packaging", "branding"],
-          tools: ["Adobe Illustrator", "Adobe InDesign"],
-          gallery: [
-            "assets/project-images/sundog/sundog-bottle.png",
-            "assets/project-images/sundog/Sundog-Ad.png",
-          ]
-      },
-      { 
-          name: "BearRabbit Taproom",
-          image: "assets/project-images/bearrabbit/bearrabbit-paper.png",
-          link: "project.html",
-          awards: "",
-          tags: ["logo design", "branding"],
-          tools: ["Adobe Illustrator"],
-          gallery: [
-            "assets/project-images/bearrabbit/logopaper.png",
-            "assets/project-images/bearrabbit/beergradient.jpg",
-            "assets/project-images/bearrabbit/coaster.png",
-          ]
+    { 
+        name: "BearRabbit Taproom",
+        image: "assets/project-images/bearrabbit/bearrabbit-paper.png",
+        link: "project.html",
+        awards: [
+          {
+            contest: "Spokane American Advertisting Federation - Elements of Advertisting: Logo Design",
+            award: "Best of Show: Gold Addy Award",
+            url: ""
+          }
+        ],
+        tags: ["logo design", "branding"],
+        tools: ["Adobe Illustrator"],
+        gallery: [
+          "assets/project-images/bearrabbit/logopaper.png",
+          "assets/project-images/bearrabbit/beergradient.jpg",
+          "assets/project-images/bearrabbit/coaster.png",
+        ]
       },
       { 
         name: "Festival at Sandpoint Poster",
         image: "assets/project-images/festivalsandpoint/sandpointposter.png",
         link: "project.html",
-        awards: "First Place",
+        awards: [
+            {
+              name: "Festival at Sandpoint Annual Poster Contest",
+              award: "First Place Winner",
+              url: "https://www.festivalatsandpoint.com/posters"
+            }
+          ],
         tags: ["illustration", "poster design"],
         tools: ["Adobe Illustrator"],
         gallery: [
@@ -98,11 +118,29 @@ document.addEventListener("DOMContentLoaded", () => {
         name: "PIA Poster",
         image: "assets/project-images/festivalsandpoint/sandpointposter.png",
         link: "project.html",
-        awards: "https://www.festivalatsandpoint.com/posters",
+        awards: [
+            {
+              name: "Printing Industries Association, Inc. - Print Excellence Awards",
+              award: "Second Place Winner",
+              url: "https://www.piasc.org/printexcellence/"
+            }
+          ],
         tags: ["illustration", "poster design"],
         tools: ["Adobe Illustrator"],
         gallery: [
           
+        ]
+    },
+    { 
+        name: "Sundog Kombucha",
+        image: "assets/project-images/sundog/sundog-bottle.png",
+        link: "project.html",
+        awards: [],
+        tags: ["packaging", "branding"],
+        tools: ["Adobe Illustrator", "Adobe InDesign"],
+        gallery: [
+          "assets/project-images/sundog/sundog-bottle.png",
+          "assets/project-images/sundog/Sundog-Ad.png",
         ]
     },
   ];
