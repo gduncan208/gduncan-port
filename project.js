@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { 
         name: "BearRabbit Taproom",
         brief: "Create a logo for a hangout such as a pub or taproom with the name BearRabbit",
-        
+        client: "Class Project",
         image: "assets/project-images/bearrabbit/bearrabbit-paper.png",
         link: "project.html",
         awards: [
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
       { 
         name: "Breathe Matchbox",
         brief: "Create a package design of your choice",
-        client: "",
+        client: "Class Project",
         image: "assets/project-images/breathematchbox/matchbox.jpg",
         link: "project.html",
         awards: [
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         ],
         tags: ["packaging", "illustration"],
-        tools: ["Adobe Illustrator"],
+        tools: ["Adobe Illustrator", "Adobe Photoshop"],
         gallery: [
           "assets/project-images/breathematchbox/package.png",
           "assets/project-images/breathematchbox/matchbox.jpg",
@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
       { 
         name: "Festival at Sandpoint Poster",
         brief: "Create a poster the encompasses the themes of the Northwest, Sandpoint or music for the Festival at Sandpoint annual event",
-        client: "",
+        client: "Festival at Sandpoint",
         image: "assets/project-images/festivalsandpoint/sandpointposter.png",
         link: "project.html",
         awards: [
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { 
         name: "PIA Poster",
         brief: "Create a poster with the prompts 'print is essential' or 'print is persuasive",
-        client: "",
+        client: "Printing Industries Association, Inc.",
         image: "assets/project-images/pia/piaposter.jpg",
         link: "project.html",
         awards: [
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { 
         name: "Sundog Kombucha",
         brief: "Create a label design of your choice",
-        client: "",
+        client: "Class Project",
         image: "assets/project-images/sundog/sundog-bottle.png",
         link: "project.html",
         awards: [],
