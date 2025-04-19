@@ -85,13 +85,37 @@ document.addEventListener("DOMContentLoaded", () => {
             projectGalleryImg.className = "pro-img";
             projectGalleryImg.src = gImg;
 
+            projectGalleryImg.addEventListener("click", () => {
+              openLightbox(gImg);
+            })
 
             projectGallery.appendChild(projectGalleryImg);
         });
 
-        
+          const lightbox = document.getElementById("theLightbox");
+          const lightboxImg = document.querySelector(".lightboxImg");
+          const closeLightboxBtn = document.querySelector(".closeLightboxBtn");
+
+          function openLightbox(gImg) {
+            
+            lightboxImg.src = gImg;
+            lightbox.style.display = "flex";
+
+          };
+
+            closeLightboxBtn.addEventListener("click", () => {
+
+              function closeLightbox() {
+                lightbox.style.display = "none";
+              };
+
+              closeLightbox();
+            });
     }
   }
+
+
+    
 
   // Project Data
   const projects = [

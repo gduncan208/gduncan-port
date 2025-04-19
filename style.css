@@ -6,7 +6,7 @@
 }
 
 html {
-    
+
 }
 
 * {
@@ -18,17 +18,13 @@ html {
     width: 10px;
   }
   
-  /* Track */
   ::-webkit-scrollbar-track {
   }
   
-  /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #595366;
     transition: 0.3s
   }
-  
-  /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #ffa33a;
   }
@@ -97,7 +93,7 @@ h1 {
 
 
 #hero {
-    height: 90vh;
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -105,11 +101,11 @@ h1 {
 }
 
 .hero-container {
-    height: 700px;
+    height: 100%;
     width: 90%;
     max-width: 1800px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
@@ -130,7 +126,7 @@ h1 {
 }
 
 .name-holder {
-    width: 400px;
+    width: 100%;
 }
 
 .border {
@@ -439,29 +435,7 @@ ul.wnav {
     }
 }
 
-.divider {
-    height: 1px;
-    width: 50vw;
-    background-color: ;
-}
-
-.filter {
-    display: flex;
-    height: 200px;
-    width: 400px;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.filter-sec1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-    height: 150px;
-}
-
-.tag-item {
+/* .tag-item {
     cursor: pointer;
 }
 
@@ -475,7 +449,7 @@ ul.wnav {
     font-weight: 500;
     background-color: #595366;
     border-radius: 40px;
-}
+} */
 
 #projectGrid {
     width: inherit;
@@ -699,6 +673,39 @@ h4 {
     height: auto;
     width: 50%;
     margin: 10px 0;
+    cursor: zoom-in;
+}
+
+/* lightbox */
+
+#theLightbox {
+    position: fixed;
+    background-color: #0f0c13;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.lightboxImg {
+    width: 80%;
+    height: auto;
+}
+
+.closeLightboxBtn {
+    background-color: transparent;
+    border: none;
+    font-family: 'SignikaNegativeSC', sans-serif;
+    text-transform: lowercase;
+    color: #fcfaf3;
+    padding: 1rem;
+    cursor: pointer;
 }
 
 /* About Page */
@@ -831,19 +838,6 @@ footer {
     height: 400px;
 }
 
-/* Obnoxiously Large Screens */
-
-#hero {
-    height: 100vh;
-    width: 100%;
-}
-
-.hero-container {
-    height: 800px;
-    width: 95%;
-}
-
-
     /* Work Section */
 
     #work {
@@ -937,16 +931,16 @@ footer {
 
     #hero {
         margin: 0;
-        height: 100vh;
+        height: 100%;
     }
 
     .hero-container {
-        height: 650px;
+        height: 575px;
         width: 100%;
-        margin-left: 1rem;
+        margin: 0;
         display: flex;
-        justify-content: space-evenly;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
     }
 
     .wnav-container {
@@ -961,13 +955,14 @@ footer {
     .intro-container {
         width: 100%;
         margin: 0;
+        padding: 0;
     }
 
     .intro {
         height: 85%;
         margin: 0;
-        padding: 0 1rem 1rem 1rem;
-        width: 95%;
+        padding: 0;
+        width: inherit;
     }
     
 
@@ -983,17 +978,17 @@ footer {
     }
 
     .first {
-        font-size: 110px;
+        font-size: 100px;
     }
 
     .last {
-        font-size: 98px;
+        font-size: 89px;
     }
 
     .blerb{
         font-size: 14px;
         margin: 0;
-
+        width: 80%;
     }
 
     .nav-container {
@@ -1020,7 +1015,7 @@ footer {
         }
     
         to {
-            height: 250px;
+            height: 220px;
             opacity: 100%;
         }
     }
@@ -1036,12 +1031,15 @@ footer {
 
 
     .border {
-        height: 500px;
-        margin-left: 10px;
+        justify-content: space-evenly;
+        height: 475px;
+        width: 70px;
+        margin: 0;
+        padding: 0 1rem;
     }
 
     .socials {
-        height: 200px;
+        height: 160px;
         margin-top: 1rem;
     }
 
@@ -1060,7 +1058,7 @@ footer {
         }
     
         to {
-            height: 350px;
+            height: 300px;
             opacity: 100%;
         }
     }
@@ -1186,6 +1184,11 @@ footer {
 
     .pro-img {
         width: 100%;
+        height: auto;
+    }
+
+    .lightboxImg {
+        width: 95%;
         height: auto;
     }
 
