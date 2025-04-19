@@ -278,14 +278,23 @@ document.addEventListener("DOMContentLoaded", () => {
   moveProjectHeading();
   window.addEventListener("resize", moveProjectHeading);
 
-  const dropdownBtn = document.querySelector(".pro-dropdown");
-  const proDetails = document.querySelector(".aside");
+const dropdownBtn = document.querySelector(".pro-dropdown");
+const proDetails = document.querySelector(".aside");
+const projectScroll = document.getElementById("projectDisplay");
 
-  if (dropdownBtn) {
-      dropdownBtn.addEventListener("click", () => {
-          proDetails.classList.toggle("activated");
-          dropdownBtn.classList.toggle("activated");
-      });
-  }
+if (dropdownBtn) {
+    dropdownBtn.addEventListener("click", () => {
+        const isActive = proDetails.classList.toggle("activated");
+        dropdownBtn.classList.toggle("activated");
+
+        if (isActive) {
+            projectScroll.style.opacity = "0";
+            projectScroll.style.pointerEvents = "none";
+        } else {
+            projectScroll.style.opacity = "1";
+            projectScroll.style.pointerEvents = "auto";
+        }
+    });
+}
 });
 
