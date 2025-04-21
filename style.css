@@ -6,7 +6,8 @@
 }
 
 html {
-
+    height: 100vh;
+    width: 100%;
 }
 
 * {
@@ -87,7 +88,7 @@ h1 {
 }
 
 .blerb {
-    max-width: 400px;
+    max-width: 450px;
     text-transform: lowercase;
 }
 
@@ -96,14 +97,15 @@ h1 {
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .hero-container {
-    height: 90vh;
+    height: 100vh;
     width: 90%;
     max-width: 1800px;
+    max-height: 800px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -204,6 +206,17 @@ h1 {
 
 ul.nav {
     margin: 0;
+    height: fit-content;
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between; */
+}
+
+.nav-li {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 a.link {
@@ -211,6 +224,9 @@ a.link {
     margin: 0 0 1em;
     color: #fcfaf3;
     transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
 }
 
 a.link:hover {
@@ -219,9 +235,13 @@ a.link:hover {
 
 .active-n{
     color: #ffa33a;
+    font-size: 42px;
+    margin: 0 0 1em;
     -webkit-text-stroke: none;
     text-decoration: none;
-    font-size: 42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 
@@ -350,7 +370,7 @@ a.link:hover {
 .mn-line {
     width: 3px;
     background-color: #fcfaf3;
-    height: 250px;
+    height: 100%;
     margin-left: 2rem;
 }
 
@@ -372,7 +392,7 @@ a.link:hover {
 
 .work-dash {
     width: 80%;
-    height: 200px;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -390,7 +410,7 @@ h2 {
 
 .wnav-container {
     width: 200px;
-    height: 200px;
+    height: 270px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -918,7 +938,7 @@ footer {
     } */
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1040px) {
     
 
     body, html {
@@ -989,6 +1009,7 @@ footer {
         font-size: 14px;
         margin: 0;
         width: 80%;
+        max-width: 300px;
     }
 
     .nav-container {
@@ -1031,8 +1052,8 @@ footer {
 
 
     .border {
-        justify-content: space-evenly;
-        height: 475px;
+        justify-content: space-between;
+        height: 400px;
         width: 70px;
         margin: 0;
         padding: 0 1rem;
@@ -1270,3 +1291,93 @@ footer {
     text-align: center;
     text-transform: lowercase;
 }
+
+/* TABLETS */
+
+@media only screen and (min-width:768px) and (max-width: 1040px) {
+
+    .nav-container {
+        width: 300px;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav {
+        align-self: flex-end;
+        height: 110px;
+        font-family: "Staatliches", 'sans-serif';
+        font-weight: 400;
+        font-size: 64px;
+        list-style: none;
+        text-align: right;
+    }
+
+    #hero {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hero-container {
+        height: 50vh;
+        width: 90%;
+        max-width: 1800px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .intro-container {
+        width: 400px;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .intro {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 2rem 2rem 2rem;
+    }
+
+    .border {
+        height: 100%;
+    }
+
+    .blerb {
+        width: 100%;
+    }
+
+    a.link {
+        font-size: 32px;
+        margin: 0 0 1em;
+        color: #fcfaf3;
+        transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+    
+    a.link:hover {
+        color: #ffa33a;
+    }
+    
+    .active-n{
+        color: #ffa33a;
+        font-size: 32px;
+        margin: 0 0 1em;
+        -webkit-text-stroke: none;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+  }
