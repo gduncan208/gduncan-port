@@ -2,7 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const storedProject = localStorage.getItem("currentProject");
-  const currentProject = storedProject ? JSON.parse(storedProject) : null;
+  const currentProject = storedProject && storedProject !== "undefined" ? JSON.parse(storedProject) : null;
 
   if (currentProject) {
       const projectHeading = document.getElementById("project-heading");
@@ -130,6 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Project Data
   const projects = [
     { 
+      id: "bearrabbit",
         name: "BearRabbit Taproom",
         brief: "Create a logo for a hangout such as a pub or taproom with the name BearRabbit",
         client: "Class Project",
@@ -137,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
         link: "project.html",
         awards: [
           {
-            name: "Spokane American Advertisting Federation - Elements of Advertisting: Logo Design",
+            contest: "Spokane American Advertisting Federation - Elements of Advertisting: Logo Design",
             award: "Best of Show",
             url: ""
           },
@@ -156,6 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ]
       },
       { 
+        id: "breathe-matches",
         name: "Breathe Matchbox",
         brief: "Create a package design of your choice",
         client: "Class Project",
@@ -163,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
         link: "project.html",
         awards: [
           {
-            name: "Spokane American Advertisting Federation - Sales and Marketing Packaging",
+            contest: "Spokane American Advertisting Federation - Sales and Marketing Packaging",
             award: "Silver American Advertisting Award",
             url: ""
           }
@@ -178,6 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ]
       },
       { 
+        id: "sandpoint-poster",
         name: "Festival at Sandpoint Poster",
         brief: "Create a poster the encompasses the themes of the Northwest, Sandpoint or music for the Festival at Sandpoint annual event",
         client: "Festival at Sandpoint",
@@ -185,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
         link: "project.html",
         awards: [
             {
-              name: "Festival at Sandpoint Annual Poster Contest",
+              contest: "Festival at Sandpoint Annual Poster Contest",
               award: "First Place Winner",
               url: "https://www.festivalatsandpoint.com/posters"
             }
@@ -198,6 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ]
     },
     { 
+        id: "pia-poster",
         name: "PIA Poster",
         brief: "Create a poster with the prompts 'print is essential' or 'print is persuasive",
         client: "Printing Industries Association, Inc.",
@@ -205,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
         link: "project.html",
         awards: [
             {
-              name: "Printing Industries Association, Inc. - Print Excellence Awards",
+              contest: "Printing Industries Association, Inc. - Print Excellence Awards",
               award: "Second Place Winner",
               url: "https://www.piasc.org/printexcellence/"
             }
@@ -217,6 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ]
     },
     { 
+        id: "sundog-kombucha",
         name: "Sundog Hard Kombucha",
         brief: "Create a label design of your choice",
         client: "Class Project",
@@ -236,6 +241,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   if (projectsContainer) {
+    const searchParams = new URLSearchParams(document.location.search);
+    const projectId = searchParams.get("projectId");
+
+
+    if (projectId) {
+      const project = projects.find((p) => p.id === projectId);
+      localStorage.setItem("currentProject", JSON.stringify(project));
+      window.location.href = "/project.html";
+    }
+
+
+
       projects.forEach(project => {
           const projectCard = document.createElement("a");
           projectCard.classList.add("project-card", "fade");
