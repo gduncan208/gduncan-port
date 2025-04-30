@@ -84,6 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const projectGalleryImg = document.createElement("img");
             projectGalleryImg.className = "pro-img";
             projectGalleryImg.src = gImg;
+            
 
             projectGalleryImg.addEventListener("click", () => {
               openLightbox(gImg);
@@ -97,11 +98,23 @@ document.addEventListener("DOMContentLoaded", () => {
           const closeLightboxBtn = document.querySelector(".closeLightboxBtn");
 
           function openLightbox(gImg) {
-            
+            lightboxImg.onload = () => {
+              const viewportHeight = window.innerHeight;
+              if (lightboxImg.naturalHeight > viewportHeight) {
+                lightboxImg.style.height = "90vh";
+                lightboxImg.style.width = "auto";
+                lightboxImg.style.objectFit = "contain";
+              } else {
+                lightboxImg.style.height = "";
+                lightboxImg.style.width = "";
+                lightboxImg.style.objectFit = "";
+              }
+            };
+          
             lightboxImg.src = gImg;
             lightbox.style.display = "flex";
-
-          };
+          }
+          
 
             closeLightboxBtn.addEventListener("click", () => {
 
@@ -114,28 +127,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-
-    
-
   // Project Data
   const projects = [
     { 
         name: "BearRabbit Taproom",
         brief: "Create a logo for a hangout such as a pub or taproom with the name BearRabbit",
         client: "Class Project",
-        image: "assets/project-images/bearrabbit/bearrabbit-paper.png",
+        image: "assets/project-images/bearrabbit/bearrabbit-paper.jpg",
         link: "project.html",
         awards: [
           {
-            contest: "Spokane American Advertisting Federation - Elements of Advertisting: Logo Design",
-            award: "Best of Show: Gold Addy Award",
+            name: "Spokane American Advertisting Federation - Elements of Advertisting: Logo Design",
+            award: "Best of Show",
+            url: ""
+          },
+          {
+            name: "Spokane American Advertisting Federation - Elements of Advertisting: Logo Design",
+            award: "Gold American Advertisting Award",
             url: ""
           }
         ],
         tags: ["logo design", "branding"],
         tools: ["Adobe Illustrator"],
         gallery: [
-          "assets/project-images/bearrabbit/logopaper.png",
+          "assets/project-images/bearrabbit/bearrabbit-paper.jpg",
           "assets/project-images/bearrabbit/beergradient.jpg",
           "assets/project-images/bearrabbit/coaster.png",
         ]
@@ -148,8 +163,8 @@ document.addEventListener("DOMContentLoaded", () => {
         link: "project.html",
         awards: [
           {
-            contest: "Spokane American Advertisting Federation - Sales and Marketing Packaging",
-            award: "Silver Addy Award",
+            name: "Spokane American Advertisting Federation - Sales and Marketing Packaging",
+            award: "Silver American Advertisting Award",
             url: ""
           }
         ],
@@ -178,7 +193,8 @@ document.addEventListener("DOMContentLoaded", () => {
         tags: ["illustration", "poster design"],
         tools: ["Adobe Illustrator"],
         gallery: [
-            "assets/project-images/festivalsandpoint/festival_gracie_PRINT-01.jpg"
+            "assets/project-images/festivalsandpoint/sandpointdesign20x30.jpg",
+            "assets/project-images/festivalsandpoint/sandpointposter.png"
         ]
     },
     { 
@@ -201,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ]
     },
     { 
-        name: "Sundog Kombucha",
+        name: "Sundog Hard Kombucha",
         brief: "Create a label design of your choice",
         client: "Class Project",
         image: "assets/project-images/sundog/sundog-bottle.png",
